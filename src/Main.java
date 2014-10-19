@@ -11,7 +11,7 @@ public class Main {
         rooms.add(new Room(RoomType.Econom,2));
         rooms.add(new Room(RoomType.Econom,1));
         rooms.add(new Room(RoomType.Standard,1));
-        rooms.add(new Room(RoomType.Standard,2));
+        rooms.add(new Room(RoomType.Standard,3));
         rooms.add(new Room(RoomType.Standard,3));
         rooms.add(new Room(RoomType.Lux,3));
         rooms.add(new Room(RoomType.Lux,2));
