@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Created by Oksana on 12.10.2014.
@@ -50,16 +49,15 @@ public class Request implements Runnable {
     @Override
     public void run() {
         try {
-            while (!Thread.currentThread().isInterrupted()) {
+            while (true) {
                 if (hotel.settle(this)) {
                     Thread.sleep(milliseconds);
                     hotel.moveOut(this);
                     synchronized (roomType) {
                         roomType.notify();
                     }
-                    Thread.sleep(5000);
+                    break;
                 } else {
-
                     synchronized (roomType) {
                         roomType.wait();
                     }
